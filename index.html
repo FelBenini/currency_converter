@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Money converter</h1>
+    </header>
+    <!--Select currencies-->
+
+    <select name="Coin" id="option1">
+        <option value="USD">USD - American Dollar</option>
+        <option value="BRL">BRL - Brazilian Real</option>
+        <option value="EUR">EUR - Europe's Euro</option>
+        <option value="CAD">CAD - Canadian Dollar</option>
+        <option value="GBP">GBP - Great Britain Pound </option>
+        <option value="JPY">JPY - Japanese Yen</option>
+    </select>
+
+    <select name="Coin" id="option2">
+        <option value="BRL">BRL - Brazilian Real</option>
+        <option value="USD">USD - American Dollar</option>
+        <option value="EUR">EUR - Europe's Euro</option>
+        <option value="CAD">CAD - Canadian Dollar</option>
+        <option value="GBP">GBP - Great Britain Pound</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+    </select>
+
+    <!--Information displaying-->
+
+    <div id="information_converted">
+        <span><span id="hide"></span><input id="quantity" type="number" value="1">
+            <p id="money_currency"></p>
+        </span>
+        <p id="paragraph"></p>
+    </div>
+
+    <button id="conversion_button">Convert</button>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
