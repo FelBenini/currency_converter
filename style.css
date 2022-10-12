@@ -1,30 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital,wght@1,600&display=swap');
+
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #264653;
     margin: 0px;
 }
 
-header{
+header {
     background-color: #F5F3F5;
     width: calc(100% -16px);
     margin: 0px;
     padding: 16px;
-    height: 30px;
+    height: 50px;
     box-shadow: #63636333 0px 2px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header h1{
+header svg {
+    margin-right: 40px;
+    margin-top: 10px;
+    fill: #474747;
+    transition: all ease-in-out 0.2s;
+}
+
+header svg:hover {
+    fill: #2a9d8f;
+}
+
+#selection select {
+    padding: 4px;
+    margin-top: 4px;
+    border: 1.5px solid #0d3f39;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+#selection select option:hover {
+    background-color: #2a9d8f;
+}
+
+option:focus,
+option:active {
+    background-color: #2a9d8f;
+}
+
+#main_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 65vh;
+}
+
+header h1 {
     font-style: italic;
     color: #0d3f39;
     border-left: 5px solid #2a9d8f;
+    font-size: 38px;
     padding-left: 8px;
+    font-family: 'Playfair Display', serif;
 }
 
 #money_currency {
     font-size: 32px;
 }
 
-#conversion_button{
+#conversion_button {
     background-color: #2a9d8f;
     color: #fafafa;
     border: none;
@@ -35,12 +77,33 @@ header h1{
     transition: all ease-in-out 0.2s;
 }
 
-#conversion_button:hover{
+#conversion_button:hover {
     border-radius: 30px;
     transform: scale(1.1);
 }
 
-#information_converted{
+#paragraph {
+    display: flex;
+}
+
+#paragraph strong {
+    margin: 0px 6px;
+    color: #2d5c6e;
+    font-size: 18px;
+}
+
+#selection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#selection label {
+    margin-top: 10px;
+}
+
+#information_converted {
     background-color: #fafafa;
     width: fit-content;
     padding: 24px;
@@ -48,12 +111,28 @@ header h1{
     padding-bottom: 32px;
     border-radius: 12px;
     box-shadow: #32325d40 0px 13px 27px -5px, #0000004d 0px 8px 16px -8px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #information_converted :first-child {
     display: flex;
     align-content: center;
     align-items: center;
+}
+
+#extra_information {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 35%;
+}
+
+#extra_information p {
+    margin: 25px;
 }
 
 /*Input resizing*/
