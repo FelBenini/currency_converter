@@ -66,6 +66,12 @@ header h1 {
     font-size: 32px;
 }
 
+#button_system{
+    display: flex;
+    height: auto;
+    align-items: center;
+}
+
 #conversion_button {
     background-color: #2a9d8f;
     color: #fafafa;
@@ -75,6 +81,7 @@ header h1 {
     padding: 10px 14px;
     border-radius: 4px;
     transition: all ease-in-out 0.2s;
+    margin-right: 15px;
 }
 
 #conversion_button:hover {
