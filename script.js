@@ -38,6 +38,7 @@ function api_caller() {
     }
 }
 
+//Number input resize to fit content
 
 $(function () {
     $('#hide').text($('#quantity').val());

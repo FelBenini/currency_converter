@@ -49,8 +49,9 @@ option:active {
 #main_section {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    height: 65vh;
+    height: 75vh;
 }
 
 header h1 {
@@ -60,6 +61,12 @@ header h1 {
     font-size: 38px;
     padding-left: 8px;
     font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 600px){
+    header h1{
+        font-size: 25px;
+    }
 }
 
 #money_currency {
@@ -128,18 +135,6 @@ header h1 {
     display: flex;
     align-content: center;
     align-items: center;
-}
-
-#extra_information {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    width: 35%;
-}
-
-#extra_information p {
-    margin: 25px;
 }
 
 /*Input resizing*/
