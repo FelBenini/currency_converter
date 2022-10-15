@@ -3,10 +3,12 @@ $("#conversion_button").click(api_caller)
 
 
 function api_caller() {
+    //if the currencies are equal to each other
     if ($("#option2").val() === $("#option1").val()) {
         $("#paragraph").text($("#quantity").val() + " " + $("#option2 option:selected").text())
         $("#money_currency").text($("#option1 option:selected").text())
     } else {
+        //if they are different
         let coin_selected_1 = $("#option1").val()
         let coin_selected_2 = $("#option2").val()
         if (coin_selected_1 === "BRL" || coin_selected_2 === "BRL") {
@@ -22,6 +24,8 @@ function api_caller() {
                 $("#money_currency").text($("#option1 option:selected").text());
             });
         } else {
+            // if none of the coins are equal to BRL, we will get two bids and divide them. This is needed due to the API not supporting conversions between all the currencies, but all of them are compatible with BRL.
+
             let settings = {
                 "url": "https://economia.awesomeapi.com.br/last/" + coin_selected_1 + "-BRL," + coin_selected_2 + "-BRL",
                 "method": "GET",
@@ -38,7 +42,7 @@ function api_caller() {
     }
 }
 
-//Number input resize to fit content
+//This function resizes the number input to fit the content
 
 $(function () {
     $('#hide').text($('#quantity').val());
